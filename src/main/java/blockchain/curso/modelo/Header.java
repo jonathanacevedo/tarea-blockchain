@@ -7,10 +7,9 @@ public class Header {
 	private String hashRoot;
 	
 	
-	public Header(String hashPrevio, Long nonce, String hashRoot) {
+	public Header(String hashPrevio, String hashRoot) {
 		super();
 		this.hashPrevio = hashPrevio;
-		this.nonce = nonce;
 		this.hashRoot = hashRoot;
 	}
 
@@ -42,6 +41,12 @@ public class Header {
 
 	public void setHashRoot(String hashRoot) {
 		this.hashRoot = hashRoot;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Header [hashPrevio=" + hashPrevio + ", nonce=" + nonce + ", hashRoot=" + hashRoot + "]";
 	}
 
 }

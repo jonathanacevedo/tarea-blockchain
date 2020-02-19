@@ -4,11 +4,11 @@ public class Bloque {
 	private Header header;
 	private Body body;
 	private Bloque bloqueAnterior;
-	private Bloque bloqueSiguiente;
 	
-	public Bloque(Header header, Body body) {
+	public Bloque(Header header, Body body, Bloque bloqueAnterior) {
 		this.header = header;
 		this.body = body;
+		this.bloqueAnterior = bloqueAnterior;
 	}
 
 	public Header getHeader() {
@@ -25,6 +25,19 @@ public class Bloque {
 
 	public void setBody(Body body) {
 		this.body = body;
+	}
+
+	public Bloque getBloqueAnterior() {
+		return bloqueAnterior;
+	}
+
+	public void setBloqueAnterior(Bloque bloqueAnterior) {
+		this.bloqueAnterior = bloqueAnterior;
+	}
+
+	@Override
+	public String toString() {
+		return "Bloque [header=" + header + ", body=" + body + ", bloqueAnterior=" + bloqueAnterior + "]";
 	}
 	
 }
